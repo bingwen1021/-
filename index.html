@@ -5,6 +5,8 @@
     <title>城市医院预约平台</title>
     <link rel="stylesheet" href="css/layout.css">
     <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/ui.css">
+    <script src="js/jquery-1.7.1.min.js"></script>
 </head>
 <body>
     <div id="top" class="top">
@@ -22,7 +24,16 @@
     <div id="header" class="header">
         <div class="wrap clearfix">
             <a class="logo" href="#"><img src="img/logo.png"></a>
-            <div class="search"></div>
+            <div class="search ui-search">
+                <div class="ui-search-selected">医院</div>
+                <div class="ui-search-select-list">
+                    <a href="#">科室</a>
+                    <a href="#">疾病</a>
+                    <a href="#">医院</a>
+                </div>
+                <input type="text" name="search-content" class="ui-search-input" placeholder="请输入搜索内容">
+                <a href="#" class="ui-search-submit">&nbsp;</a>
+            </div>
         </div>
     </div>
 
@@ -155,5 +166,6 @@
     <div id="footer" class="footer">
         Copyright © 2020XX网版权所有
     </div>
+    <script src="js/ui.js"></script>
 </body>
 </html>
