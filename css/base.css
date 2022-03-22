@@ -65,6 +65,9 @@ select,input{
     min-width: 80px;
     text-align: center;
 }
+.nav .right{
+    float: right;
+}
 .nav a:hover{
     color: #d7f3ff;
 }

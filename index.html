@@ -395,14 +395,37 @@
     </div>
 
     <div id="banner" class="banner">
-        <div class="banner-slider"></div>
+        <div class="banner-slider ui-slider">
+            <div class="ui-slider-wrap">
+                <a href="#0" class="item"><img src="img/banner_1.jpg" alt="banner-1"></a>
+                <a href="#1" class="item"><img src="img/banner_2.jpg" alt="banner-2"></a>
+                <a href="#2" class="item"><img src="img/banner_3.jpg" alt="banner-3"></a>
+            </div>
+            <div class="ui-slider-arrow">
+                <a href="#l" class="item left">&nbsp;</a>
+                <a href="#r" class="item right">&nbsp;</a>
+            </div>
+            <div class="ui-slider-process">
+                <a href="#0" class="item item_focus">&nbsp;</a>
+                <a href="#1" class="item">&nbsp;</a>
+                <a href="#2" class="item">&nbsp;</a>
+            </div>
+        </div>
         <div class="banner-search">
             <div class="caption"><span class="text">快速预约</span></div>
-            <div class="form">
-                <div class="line"><select name="area"><option value="">医院地区</option></select></div>
-                <div class="line"><select name="item-level"><option value="">医院等级</option></select></div>
-                <div class="line"><select name="name"><option value="">医院名称</option></select></div>
-                <div class="line"><select name="department"><option value="">医院科室</option></select></div>
+            <div class="form ui-cascading">
+                <div class="line">
+                    <select name="area" data-search="getDistinctArea" data-where=""><option value="">医院地区</option></select>
+                </div>
+                <div class="line">
+                    <select name="level" data-search="getLeveByArea" data-where=""><option value="">医院等级</option></select>
+                </div>
+                <div class="line">
+                    <select name="name" data-search="getNameByAreaAndLevel" data-where=""><option value="">医院名称</option></select>
+                </div>
+                <div class="line">
+                    <select name="department" data-search="getDepartmentArrByHospitalName" data-where=""><option value="">科室名称</option></select>
+                </div>
             </div>
             <div class="submit">
                 <input type="button" class="button" value="快速查询">
@@ -518,5 +541,6 @@
         Copyright © 2020XX网版权所有
     </div>
     <script src="js/ui.js"></script>
+    <script src="js/data.js"></script>
 </body>
 </html>
